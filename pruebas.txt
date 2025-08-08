@@ -1,0 +1,70 @@
+PRUEBAS PARA MARCHA DE LA LEGIÓN
+================================
+
+PRUEBAS VÁLIDAS (deben funcionar correctamente):
+------------------------------------------------
+
+1. Caracteres con Ordenamiento por Inserción (5 unidades):
+   java Troops a=i t=c u=1,1,2,3,5
+
+2. Números con Ordenamiento por Inserción (5 unidades):
+   java Troops a=i t=n r=1,1,2,3,5
+
+3. Solo caracteres (3 unidades):
+   java Troops a=i t=c u=A,B,C
+
+4. Solo números (4 unidades):
+   java Troops a=i t=n r=10,5,20,15
+
+5. Múltiples unidades del mismo tipo (6 unidades C):
+   java Troops a=i t=c u=C,C,C,C,C,C
+
+6. Múltiples números del mismo valor (8 unidades):
+   java Troops a=i t=n r=5,5,5,5,5,5,5,5
+
+7. Unidades mixtas (caracteres y números como strings):
+   java Troops a=i t=c u=A,1,B,2,C,3
+
+8. Máximo de unidades (36 unidades):
+   java Troops a=i t=n r=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36
+
+9. Múltiples columnas para un tipo (8 unidades C - 6 en primera columna, 2 en segunda):
+   java Troops a=i t=c u=C,C,C,C,C,C,C,C
+
+10. Múltiples columnas para números (10 unidades del valor 5):
+    java Troops a=i t=n r=5,5,5,5,5,5,5,5,5,5
+
+PRUEBAS INVÁLIDAS (deben mostrar "Valores Invalidos"):
+------------------------------------------------------
+
+11. Algoritmo inválido:
+    java Troops a=b t=c u=1,2,3
+
+12. Tipo inválido:
+    java Troops a=i t=x u=1,2,3
+
+13. Sin unidades:
+    java Troops a=i t=c
+
+14. Demasiadas unidades (más de 36):
+    java Troops a=i t=n r=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37
+
+15. Parámetros mal formateados:
+    java Troops a=1 t= r=12345
+
+16. Sin argumentos:
+    java Troops
+
+17. Algoritmo y tipo inválidos:
+    java Troops a=x t=y u=1,2,3
+
+NOTAS:
+- Las unidades se mostrarán primero de forma aleatoria en el tablero
+- Después del ordenamiento, se colocarán en forma de columna vertical desde abajo hacia arriba
+- Cada columna puede tener máximo 6 unidades del mismo tipo
+- Si hay más de 6 unidades del mismo tipo, se distribuyen en múltiples columnas
+- Cada columna solo puede contener un tipo de unidad
+- El formato es: java Troops a=<algoritmo> t=<tipo> u=<unidades> o r=<unidades>
+- Algoritmos válidos: i (insertion sort)
+- Tipos válidos: c (caracteres), n (números)
+- Máximo 36 unidades (6x6 tablero) 
