@@ -1,70 +1,196 @@
-PRUEBAS PARA MARCHA DE LA LEGIÓN
-================================
+PRUEBAS PARA LEGION - SISTEMA DE ORDENAMIENTO DE TROPAS
+========================================================
 
 PRUEBAS VÁLIDAS (deben funcionar correctamente):
 ------------------------------------------------
 
-1. Caracteres con Ordenamiento por Inserción (5 unidades):
-   java Troops a=i t=c u=1,1,2,3,5
+ALGORITMOS DE ORDENAMIENTO:
+1. Selection Sort con caracteres:
+   java Troops a=s t=c o=s u=1,2,5,5,10 f=10
 
-2. Números con Ordenamiento por Inserción (5 unidades):
-   java Troops a=i t=n r=1,1,2,3,5
+2. Bubble Sort con números:
+   java Troops a=b t=n o=n u=1,1,2,3,5 f=8
 
-3. Solo caracteres (3 unidades):
-   java Troops a=i t=c u=A,B,C
+3. Insertion Sort con caracteres (ejemplo original):
+   java Troops a=i t=c o=s u=1,2,5,5,10 f=10
 
-4. Solo números (4 unidades):
-   java Troops a=i t=n r=10,5,20,15
+4. Merge Sort con números:
+   java Troops a=m t=n o=e u=2,3,4,1,6 f=12
 
-5. Múltiples unidades del mismo tipo (6 unidades C):
-   java Troops a=i t=c u=C,C,C,C,C,C
+5. Quick Sort con caracteres:
+   java Troops a=q t=c o=w u=3,2,4,1,5 f=15
 
-6. Múltiples números del mismo valor (8 unidades):
-   java Troops a=i t=n r=5,5,5,5,5,5,5,5
+6. Heap Sort con números:
+   java Troops a=h t=n o=s u=1,1,2,3,5 f=6
 
-7. Unidades mixtas (caracteres y números como strings):
-   java Troops a=i t=c u=A,1,B,2,C,3
+7. Counting Sort con caracteres:
+   java Troops a=c t=c o=n u=2,2,3,2,4 f=8
 
-8. Máximo de unidades (36 unidades):
-   java Troops a=i t=n r=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36
+8. Radix Sort con números:
+   java Troops a=r t=n o=e u=5,3,7,2,1 f=10
 
-9. Múltiples columnas para un tipo (8 unidades C - 6 en primera columna, 2 en segunda):
-   java Troops a=i t=c u=C,C,C,C,C,C,C,C
+ORIENTACIONES:
+9. Norte (Sur a Norte):
+   java Troops a=i t=c o=n u=1,2,3,4,5 f=10
 
-10. Múltiples columnas para números (10 unidades del valor 5):
-    java Troops a=i t=n r=5,5,5,5,5,5,5,5,5,5
+10. Sur (Norte a Sur):
+    java Troops a=s t=n o=s u=1,1,2,3,5 f=6
+
+11. Este (Oeste a Este):
+    java Troops a=b t=c o=e u=2,2,2,2,2 f=8
+
+12. Oeste (Este a Oeste):
+    java Troops a=m t=n o=w u=3,1,4,2,6 f=12
+
+TAMAÑOS DE CAMPO:
+13. Campo pequeño (5x5):
+    java Troops a=i t=c o=s u=1,1,1,1,1 f=5
+
+14. Campo mediano (8x8):
+    java Troops a=s t=n o=n u=2,2,2,2,2 f=8
+
+15. Campo grande (15x15):
+    java Troops a=q t=c o=e u=5,5,5,5,5 f=15
+
+16. Campo por defecto (10x10):
+    java Troops a=h t=n o=w u=3,3,3,3,3
+
+DISTRIBUCIONES DE TROPAS:
+17. Distribución equilibrada:
+    java Troops a=i t=c o=s u=5,5,5,5,5 f=10
+
+18. Muchos comandantes:
+    java Troops a=b t=n o=n u=10,2,2,2,2 f=12
+
+19. Mucha infantería:
+    java Troops a=m t=c o=e u=1,1,1,1,20 f=15
+
+20. Solo comandantes y médicos:
+    java Troops a=q t=n o=w u=8,8,0,0,0 f=10
+
+COMBINACIONES COMPLEJAS:
+21. Algoritmo complejo con orientación específica:
+    java Troops a=r t=c o=n u=3,4,5,6,7 f=20
+
+22. Múltiples algoritmos con diferentes tipos:
+    java Troops a=h t=n o=s u=2,3,4,5,6 f=16
+
+23. Campo grande con distribución variada:
+    java Troops a=c t=c o=e u=10,8,6,4,2 f=25
+
+24. Algoritmo rápido con orientación oeste:
+    java Troops a=q t=n o=w u=1,2,3,4,5 f=10
 
 PRUEBAS INVÁLIDAS (deben mostrar "Valores Invalidos"):
 ------------------------------------------------------
 
-11. Algoritmo inválido:
-    java Troops a=b t=c u=1,2,3
+ALGORITMOS INVÁLIDOS:
+25. Algoritmo inexistente:
+    java Troops a=x t=c o=s u=1,2,3,4,5 f=10
 
-12. Tipo inválido:
-    java Troops a=i t=x u=1,2,3
+26. Algoritmo vacío:
+    java Troops a= t=c o=s u=1,2,3,4,5 f=10
 
-13. Sin unidades:
-    java Troops a=i t=c
+TIPOS INVÁLIDOS:
+27. Tipo inexistente:
+    java Troops a=i t=x o=s u=1,2,3,4,5 f=10
 
-14. Demasiadas unidades (más de 36):
-    java Troops a=i t=n r=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37
+28. Tipo vacío:
+    java Troops a=i t= o=s u=1,2,3,4,5 f=10
 
-15. Parámetros mal formateados:
-    java Troops a=1 t= r=12345
+ORIENTACIONES INVÁLIDAS:
+29. Orientación inexistente:
+    java Troops a=i t=c o=x u=1,2,3,4,5 f=10
 
-16. Sin argumentos:
+30. Orientación vacía:
+    java Troops a=i t=c o= u=1,2,3,4,5 f=10
+
+TAMAÑOS DE CAMPO INVÁLIDOS:
+31. Campo muy pequeño:
+    java Troops a=i t=c o=s u=1,2,3,4,5 f=3
+
+32. Campo muy grande:
+    java Troops a=i t=c o=s u=1,2,3,4,5 f=1001
+
+33. Campo negativo:
+    java Troops a=i t=c o=s u=1,2,3,4,5 f=-5
+
+34. Campo no numérico:
+    java Troops a=i t=c o=s u=1,2,3,4,5 f=abc
+
+DISTRIBUCIONES INVÁLIDAS:
+35. Sin unidades:
+    java Troops a=i t=c o=s f=10
+
+36. Distribución vacía:
+    java Troops a=i t=c o=s u= f=10
+
+37. Valores negativos:
+    java Troops a=i t=c o=s u=-1,2,3,4,5 f=10
+
+38. Demasiadas unidades para el campo:
+    java Troops a=i t=c o=s u=100,100,100,100,100 f=10
+
+39. Formato inválido de distribución:
+    java Troops a=i t=c o=s u=1;2;3;4;5 f=10
+
+PARÁMETROS FALTANTES:
+40. Sin algoritmo:
+    java Troops t=c o=s u=1,2,3,4,5 f=10
+
+41. Sin tipo:
+    java Troops a=i o=s u=1,2,3,4,5 f=10
+
+42. Sin orientación:
+    java Troops a=i t=c u=1,2,3,4,5 f=10
+
+43. Sin unidades:
+    java Troops a=i t=c o=s f=10
+
+CASOS EXTREMOS:
+44. Sin argumentos:
     java Troops
 
-17. Algoritmo y tipo inválidos:
-    java Troops a=x t=y u=1,2,3
+45. Solo algoritmo:
+    java Troops a=i
 
-NOTAS:
-- Las unidades se mostrarán primero de forma aleatoria en el tablero
-- Después del ordenamiento, se colocarán en forma de columna vertical desde abajo hacia arriba
-- Cada columna puede tener máximo 6 unidades del mismo tipo
-- Si hay más de 6 unidades del mismo tipo, se distribuyen en múltiples columnas
-- Cada columna solo puede contener un tipo de unidad
-- El formato es: java Troops a=<algoritmo> t=<tipo> u=<unidades> o r=<unidades>
-- Algoritmos válidos: i (insertion sort)
-- Tipos válidos: c (caracteres), n (números)
-- Máximo 36 unidades (6x6 tablero) 
+46. Solo tipo:
+    java Troops t=c
+
+47. Solo orientación:
+    java Troops o=s
+
+48. Solo tamaño:
+    java Troops f=10
+
+49. Solo unidades:
+    java Troops u=1,2,3,4,5
+
+50. Parámetros mezclados inválidos:
+    java Troops a=x t=y o=z u=invalid f=9999
+
+NOTAS IMPORTANTES:
+==================
+
+PARÁMETROS VÁLIDOS:
+- a: Algoritmo (s,b,i,m,q,h,c,r) - Selection, Bubble, Insertion, Merge, Quick, Heap, Counting, Radix
+- t: Tipo (n,c) - Number, Character
+- o: Orientación (n,s,e,w) - Norte, Sur, Este, Oeste
+- u: Distribución de tropas [Comandantes, Médicos, Tanques, Snipers, Infantería]
+- f: Tamaño del campo (5-1000, por defecto 10)
+
+SISTEMA DE TROPAS:
+- Las tropas se ordenan jerárquicamente: Comandante → Médico → Tanque → Sniper → Infantería
+- Los números se mapean automáticamente: 1-10→Comandante, 11-20→Médico, etc.
+- Los caracteres se mapean: a-j→Comandante, k-t→Médico, u-z→Tanque, etc.
+
+ORIENTACIONES:
+- N/n: Sur a Norte (abajo hacia arriba)
+- S/s: Norte a Sur (arriba hacia abajo)
+- E/e: Oeste a Este (izquierda hacia derecha)
+- W/w: Este a Oeste (derecha hacia izquierda)
+
+FORMATO DE SALIDA:
+- Muestra algoritmo, tipo, orientación, número de tropas y tamaño del campo
+- Posición inicial aleatoria
+- Posición final ordenada según orientación especificada 
