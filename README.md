@@ -121,13 +121,20 @@ test_example.bat
 
 ## Características Implementadas
 
-✅ **8 algoritmos de ordenamiento** completos para números y caracteres
-✅ **Sistema de orientación** (Norte, Sur, Este, Oeste)
-✅ **Tamaño de campo configurable** (5x5 a 1000x1000)
-✅ **Sistema jerárquico de tropas** (Comandante → Médico → Tanque → Sniper → Infantería)
-✅ **Mapeo automático** de números y caracteres a tipos de tropa
-✅ **Validación completa** de parámetros de entrada
-✅ **Código limpio** con comentarios y buenas prácticas
+**8 algoritmos de ordenamiento** completos para números y caracteres
+
+**Sistema de orientación** (Norte, Sur, Este, Oeste)
+
+**Tamaño de campo configurable** (5x5 a 1000x1000)
+
+**Sistema jerárquico de tropas** (Comandante → Médico → Tanque → Sper → Infantería)
+
+**Mapeo automático** de números y caracteres a tipos de tropa
+
+**Validación completa** de parámetros de entrada
+
+**Código limpio** con comentarios y buenas prácticas
+
 
 ## Notas de Implementación
 
@@ -135,3 +142,7 @@ test_example.bat
 - El sistema de orientación respeta la dirección especificada al colocar las tropas ordenadas
 - La validación de parámetros asegura que solo se procesen entradas válidas
 - El código sigue las convenciones de Java y principios de clean code 
+
+## Diagrama de clases
+
+![Diiagrama-de-clases](https://res.cloudinary.com/dudftt5ha/image/upload/v1757262906/shiehiff7qy93esv7tjz.png)
