@@ -1,8 +1,8 @@
 import java.util.*;
 
 public class ValidadorParametros {
-    // Valid algorithms: Selection, Bubble, Insertion, Merge, Quick, Heap, Counting, Radix
-    private static final String[] ALGORITMOS_VALIDOS = {"s", "b", "i", "m", "q", "h", "c", "r"};
+    // Valid algorithms: Selection, Bubble, Insertion, Merge
+    private static final String[] ALGORITMOS_VALIDOS = {"s", "b", "i", "m"};
     // Valid types: Numeric or Character
     private static final String[] TIPOS_VALIDOS = {"n", "c"};
     // Valid orientations: North, South, East, West
@@ -149,10 +149,6 @@ public class ValidadorParametros {
             case "b": return "Bubble sort";
             case "i": return "Insertion sort";
             case "m": return "Merge sort";
-            case "q": return "Quick sort";
-            case "h": return "Heap sort";
-            case "c": return "Counting sort";
-            case "r": return "Radix sort";
             default: return "Invalido";
         }
     }
