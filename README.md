@@ -10,10 +10,6 @@ Sistema de ordenamiento de tropas en un campo de batalla que implementa múltipl
 - `"B"` o `"b"` → Bubble sort (burbuja)
 - `"I"` o `"i"` → Insertion sort (inserción)
 - `"M"` o `"m"` → Merge sort (combinación)
-- `"Q"` o `"q"` → Quick sort (rápida)
-- `"H"` o `"h"` → Heap sort (montón)
-- `"C"` o `"c"` → Counting sort (conteo)
-- `"R"` o `"r"` → Radix sort (raíz)
 
 ### t - Tipo de Lista
 - `"N"` o `"n"` → Lista de números

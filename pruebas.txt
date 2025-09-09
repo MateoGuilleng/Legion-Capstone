@@ -17,18 +17,6 @@ ALGORITMOS DE ORDENAMIENTO:
 4. Merge Sort con números:
    java Troops a=m t=n o=e u=2,3,4,1,6 f=12
 
-5. Quick Sort con caracteres:
-   java Troops a=q t=c o=w u=3,2,4,1,5 f=15
-
-6. Heap Sort con números:
-   java Troops a=h t=n o=s u=1,1,2,3,5 f=6
-
-7. Counting Sort con caracteres:
-   java Troops a=c t=c o=n u=2,2,3,2,4 f=8
-
-8. Radix Sort con números:
-   java Troops a=r t=n o=e u=5,3,7,2,1 f=10
-
 ORIENTACIONES:
 9. Norte (Sur a Norte):
    java Troops a=i t=c o=n u=1,2,3,4,5 f=10
@@ -50,10 +38,10 @@ TAMAÑOS DE CAMPO:
     java Troops a=s t=n o=n u=2,2,2,2,2 f=8
 
 15. Campo grande (15x15):
-    java Troops a=q t=c o=e u=5,5,5,5,5 f=15
+    java Troops a=i t=c o=e u=5,5,5,5,5 f=15
 
 16. Campo por defecto (10x10):
-    java Troops a=h t=n o=w u=3,3,3,3,3
+    java Troops a=s t=n o=w u=3,3,3,3,3
 
 DISTRIBUCIONES DE TROPAS:
 17. Distribución equilibrada:
@@ -66,20 +54,20 @@ DISTRIBUCIONES DE TROPAS:
     java Troops a=m t=c o=e u=1,1,1,1,20 f=15
 
 20. Solo comandantes y médicos:
-    java Troops a=q t=n o=w u=8,8,0,0,0 f=10
+    java Troops a=s t=n o=w u=8,8,0,0,0 f=10
 
 COMBINACIONES COMPLEJAS:
 21. Algoritmo complejo con orientación específica:
-    java Troops a=r t=c o=n u=3,4,5,6,7 f=20
+    java Troops a=i t=c o=n u=3,4,5,6,7 f=20
 
 22. Múltiples algoritmos con diferentes tipos:
-    java Troops a=h t=n o=s u=2,3,4,5,6 f=16
+    java Troops a=s t=n o=s u=2,3,4,5,6 f=16
 
 23. Campo grande con distribución variada:
-    java Troops a=c t=c o=e u=10,8,6,4,2 f=25
+    java Troops a=b t=c o=e u=10,8,6,4,2 f=25
 
 24. Algoritmo rápido con orientación oeste:
-    java Troops a=q t=n o=w u=1,2,3,4,5 f=10
+    java Troops a=m t=n o=w u=1,2,3,4,5 f=10
 
 PRUEBAS INVÁLIDAS (deben mostrar "Valores Invalidos"):
 ------------------------------------------------------
@@ -173,7 +161,7 @@ NOTAS IMPORTANTES:
 ==================
 
 PARÁMETROS VÁLIDOS:
-- a: Algoritmo (s,b,i,m,q,h,c,r) - Selection, Bubble, Insertion, Merge, Quick, Heap, Counting, Radix
+- a: Algoritmo (s,b,i,m) - Selection, Bubble, Insertion, Merge
 - t: Tipo (n,c) - Number, Character
 - o: Orientación (n,s,e,w) - Norte, Sur, Este, Oeste
 - u: Distribución de tropas [Comandantes, Médicos, Tanques, Snipers, Infantería]
