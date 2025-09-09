@@ -121,7 +121,7 @@ test_example.bat
 
 ## Características Implementadas
 
-**8 algoritmos de ordenamiento** completos para números y caracteres
+**4 algoritmos de ordenamiento** completos para números y caracteres
 
 **Sistema de orientación** (Norte, Sur, Este, Oeste)
 
